@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>{{.Title}}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/screen.css" rel="stylesheet" media="screen">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="content">
+        <section class="section section-main bg-cover" id="go">
+            <div class="container">
+
+
+                <div class="section-in">
+                    <div class="form-transfer">
+                        <form method="POST" id="transfer_form" novalidate="novalidate">
+                            <div class="form-columns clearfix">
+                                <div class="column form-column-left">
+                                    <fieldset class="form-in">
+                                        <div class="h4">Отправитель</div>
+                                        <div id="sender_bank"><img id="sender_bank_logo" src=""></div>
+                                        <div class="form-group"><label class="control-label"><span id="sender_init_message">Введите номер карты</span><span id="sender_init_err_message" style="display: none; color: red;">Номер карты неверен</span></label>
+                                            <div class="controls clearfix">
+                                                <div class="input span1"><input id="sender_card_num_1" name="sender_card_num_1" data-input-type="number"
+                                                        class="card_numbers_input card_sender form-control" maxlength="4" autocomplete="off"
+                                                        onchange="amplitude.getInstance().logEvent('SenderNumber1');" type="text"></div>
+                                                <div class="input span1"><input id="sender_card_num_2" name="sender_card_num_2" data-input-type="number"
+                                                        class="card_numbers_input card_sender form-control" maxlength="4" autocomplete="off"
+                                                        onchange="amplitude.getInstance().logEvent('SenderNumber2');" type="text"></div>
+                                                <div class="input span1"><input id="sender_card_num_3" name="sender_card_num_3" data-input-type="number"
+                                                        class="card_numbers_input card_sender form-control" maxlength="4" autocomplete="off"
+                                                        onchange="amplitude.getInstance().logEvent('SenderNumber3');" type="text"></div>
+                                                <div class="input span1"><input id="sender_card_num_4" name="sender_card_num_4" data-input-type="number"
+                                                        class="card_numbers_input card_sender form-control" maxlength="4" autocomplete="off"
+                                                        onchange="amplitude.getInstance().logEvent('SenderNumber4');" type="text"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-groups clearfix">
+                                            <div class="form-group">
+                                                <div class="clearfix"><label class="control-label pull-left">Срок действия карты</label>
+                                                    <label
+                                                        class="control-label pull-right"><span>CVV/CVC код</span>&nbsp;<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
+                                                            class="link-unstyled link-help" data-toggle="tooltip" data-placement="bottom"
+                                                            title="" i18n:attr="title" data-original-title="Три цифры, указанные на оборотной стороне карты"><i class="icon-help">&nbsp;</i></span></label>
+                                                </div>
+                                                <div class="controls clearfix">
+                                                    <div class="input span1"><select id="sender_exp_date_month" name="sender_exp_date_month" class="form-control bs-select-hidden"
+                                                            onchange="amplitude.getInstance().logEvent('SenderDate1');"><option selected="selected">01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option></select>
+                                                        <div class="btn-group bootstrap-select form-control"><button type="button" class="btn dropdown-toggle form-control" data-toggle="dropdown"
+                                                                data-id="sender_exp_date_month" title="01"><span class="filter-option pull-left">01</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button>
+                                                            <div class="dropdown-menu open">
+                                                                <ul class="dropdown-menu inner" role="menu">
+                                                                    <li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">01</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">02</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">03</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">04</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">05</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">06</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="6"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">07</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="7"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">08</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="8"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">09</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="9"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">10</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="10"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">11</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="11"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">12</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!--<div class="btn-group bootstrap-select form-control"><button type="button" class="btn dropdown-toggle form-control" data-toggle="dropdown"
+                                                                data-id="sender_exp_date_month" title="01"><span class="filter-option pull-left">01</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button>
+                                                            <div class="dropdown-menu open">
+                                                                <ul class="dropdown-menu inner" role="menu">
+                                                                    <li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">01</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">02</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">03</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">04</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">05</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">06</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="6"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">07</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="7"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">08</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="8"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">09</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="9"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">10</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="10"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">11</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="11"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">12</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>-->
+                                                    </div>
+                                                    <div class="input span1"><span class="divider">/</span><select id="sender_exp_date_year" name="sender_exp_date_year"
+                                                            class="form-control bs-select-hidden" onchange="amplitude.getInstance().logEvent('SenderDate2');"><option value="17" selected="selected">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option></select>
+                                                        <div class="btn-group bootstrap-select form-control"><button type="button" class="btn dropdown-toggle form-control" data-toggle="dropdown"
+                                                                data-id="sender_exp_date_year" title="17"><span class="filter-option pull-left">17</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button>
+                                                            <div class="dropdown-menu open">
+                                                                <ul class="dropdown-menu inner" role="menu">
+                                                                    <li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">17</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">18</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">19</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">20</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">21</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">22</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="btn-group bootstrap-select form-control"><button type="button" class="btn dropdown-toggle form-control" data-toggle="dropdown"
+                                                                data-id="sender_exp_date_year" title="17"><span class="filter-option pull-left">17</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button>
+                                                            <div class="dropdown-menu open">
+                                                                <ul class="dropdown-menu inner" role="menu">
+                                                                    <li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">17</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">18</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">19</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">20</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">21</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                    <li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">22</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div> -->
+                                                    </div>
+                                                    <div class="input span1 pull-right"><input id="sender_cvv" name="sender_cvv" data-input-type="number" class="form-control inp-num"
+                                                            maxlength="4" onfocus="this.type='password'" autocomplete="off" onchange="amplitude.getInstance().logEvent('SenderCVC1');"
+                                                            type="text"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="column form-column-right">
+                                    <fieldset class="form-in">
+                                        <div class="h4">Получатель</div>
+                                        <div id="receiver_bank"><img id="receiver_bank_logo" src=""></div>
+                                        <div class="form-group"><label class="control-label"><span id="receiver_init_message">Введите номер карты</span><span id="receiver_init_err_message" style="display: none; color: red;">Номер карты неверен</span></label>
+                                            <div class="controls clearfix">
+                                                <div class="input span1"><input id="receiver_card_num_1" name="receiver_card_num_1" data-input-type="number"
+                                                        class="card_numbers_input card_receiver form-control" maxlength="4" autocomplete="off"
+                                                        onchange="amplitude.getInstance().logEvent('RecipientNumber1');" type="text"></div>
+                                                <div class="input span1"><input id="receiver_card_num_2" name="receiver_card_num_2" data-input-type="number"
+                                                        class="card_numbers_input card_receiver form-control" maxlength="4" autocomplete="off"
+                                                        onchange="amplitude.getInstance().logEvent('RecipientNumber2');" type="text"></div>
+                                                <div class="input span1"><input id="receiver_card_num_3" name="receiver_card_num_3" data-input-type="number"
+                                                        class="card_numbers_input card_receiver form-control" maxlength="4" autocomplete="off"
+                                                        onchange="amplitude.getInstance().logEvent('RecipientNumber3');" type="text"></div>
+                                                <div class="input span1"><input id="receiver_card_num_4" name="receiver_card_num_4" data-input-type="number"
+                                                        class="card_numbers_input card_receiver form-control" maxlength="4" autocomplete="off"
+                                                        onchange="amplitude.getInstance().logEvent('RecipientNumber4');" type="text"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="control-label">Введите ваш e-mail</label>
+                                            <div class="controls clearfix">
+                                                <div class="input span3"><input id="sender_email" name="sender_email" class="form-control" autocomplete="off"
+                                                        onchange="amplitude.getInstance().logEvent('SenderEmail');" type="email"></div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-amount">
+                                <div class="form-group"><label class="control-label">Сумма перевода</label>
+                                    <div class="controls text-uppercase"><input id="amount" name="amount" data-input-type="number" class="form-control inp-num"
+                                            maxlength="7" autocomplete="off" onchange="amplitude.getInstance().logEvent('Summ');"
+                                            type="text"><span class="curr">kzt</span></div>
+                                    <div class="form-commission" id="commission" style="display: none;"><label>Комиссия:</label>
+                                        <div>
+                                            <div id="p2p_comm">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-controls">
+                                <input xmlns:i18n="http://apache.org/cocoon/i18n/2.1" id="transfer" name="transfer" value="Перевести" class="btn btn-brand btn-block" i18n:attr="value" type="submit">
+                                <input id="sender_bank" value="" type="hidden">
+                                <input id="receiver_bank" value="" type="hidden">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
