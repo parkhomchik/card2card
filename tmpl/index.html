@@ -19,26 +19,28 @@
 
                 <div class="section-in">
                     <div class="form-transfer">
-                        <form method="POST" id="transfer_form" novalidate="novalidate">
+                        <form method="POST" action="p2p">
                             <div class="form-columns clearfix">
                                 <div class="column form-column-left">
+
                                     <fieldset class="form-in">
                                         <div class="h4">Отправитель</div>
+                                        
                                         <div id="sender_bank"><img id="sender_bank_logo" src=""></div>
                                         <div class="form-group"><label class="control-label"><span id="sender_init_message">Введите номер карты</span><span id="sender_init_err_message" style="display: none; color: red;">Номер карты неверен</span></label>
                                             <div class="controls clearfix">
                                                 <div class="input span1"><input id="sender_card_num_1" name="sender_card_num_1" data-input-type="number"
                                                         class="card_numbers_input card_sender form-control" maxlength="4" autocomplete="off"
-                                                        onchange="amplitude.getInstance().logEvent('SenderNumber1');" type="text"></div>
+                                                        type="text"></div>
                                                 <div class="input span1"><input id="sender_card_num_2" name="sender_card_num_2" data-input-type="number"
                                                         class="card_numbers_input card_sender form-control" maxlength="4" autocomplete="off"
-                                                        onchange="amplitude.getInstance().logEvent('SenderNumber2');" type="text"></div>
+                                                        type="text"></div>
                                                 <div class="input span1"><input id="sender_card_num_3" name="sender_card_num_3" data-input-type="number"
                                                         class="card_numbers_input card_sender form-control" maxlength="4" autocomplete="off"
-                                                        onchange="amplitude.getInstance().logEvent('SenderNumber3');" type="text"></div>
+                                                        type="text"></div>
                                                 <div class="input span1"><input id="sender_card_num_4" name="sender_card_num_4" data-input-type="number"
                                                         class="card_numbers_input card_sender form-control" maxlength="4" autocomplete="off"
-                                                        onchange="amplitude.getInstance().logEvent('SenderNumber4');" type="text"></div>
+                                                        type="text"></div>
                                             </div>
                                         </div>
                                         <div class="form-groups clearfix">
